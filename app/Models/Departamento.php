@@ -22,4 +22,9 @@ class Departamento extends Model
         return $this->hasManyThrough(Predio::class, Municipio::class);
     }
 
+    public function imagenes()
+    {
+        return $this->morphMany('App\Models\Imagen', 'imageable');
+    }
+
 }

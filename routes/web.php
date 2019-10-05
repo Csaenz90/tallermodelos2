@@ -26,6 +26,17 @@ Route::get('solicitante', 'SolicitanteController@index');
 Route::post('solicitante', 'SolicitanteController@store');
 Route::post('guardarPredios', 'SolicitanteController@guardarPredios');
 Route::post('guardarSync', 'SolicitanteController@guardarSync');
+Route::get('/departamentoindex', 'ImagenController@index');
+Route::post('departamentostore', 'ImagenController@store');
+
+Route::get('/municipioindex', 'ImagenController@indexMunicipio');
+Route::post('/municipiostore', 'ImagenController@storeMunicipio');
+
+Route::get('/predioindex', 'ImagenController@indexPredio');
+Route::post('/prediostore', 'ImagenController@storePredio');
+
+
+
 
 
 

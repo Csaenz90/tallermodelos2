@@ -22,4 +22,9 @@ class Municipio extends Model
     {
         return $this->hasMany(Predio::class);
     }
+     public function imagenes()
+    {
+        return $this->morphMany('App\Models\Imagen', 'imageable');
+    }
+
 }

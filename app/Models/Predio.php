@@ -29,4 +29,9 @@ class Predio extends Model
     {
         return $this->belongsToMany(Solicitante::class,'solicitudes')->withTimestamps();
     }
+     public function imagenes()
+    {
+        return $this->morphMany('App\Models\Imagen', 'imageable');
+    }
+
 }
